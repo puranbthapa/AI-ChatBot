@@ -2,7 +2,7 @@
 header('Content-Type: application/json');
 
 // Replace with your OpenAI API key
-$api_key = 'sk-proj';
+$api_key = 'your-openai-api-key-here';
 
 $input = json_decode(file_get_contents('php://input'), true);
 $user_message = $input['message'];
@@ -35,3 +35,4 @@ $reply = $result['choices'][0]['message']['content'] ?? 'Sorry, I could not proc
 
 echo json_encode(["reply" => $reply]);
 ?>
+
